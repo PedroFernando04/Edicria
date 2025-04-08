@@ -48,7 +48,7 @@ def inserir_livro(conn, nome, id_autor, id_editora, data, id_genero, status, ano
             cursor.execute(query, (nome, id_autor, id_editora, data, id_genero, status, ano, nota, resenha, id_cliente))
         
         else:
-            query = "INSERT INTO editora.livros(nome_livro, id_autor_livro, id_editora_livro, data_de_lancamento_livro, id_genero_livro, id_cliente_livro) VALUES (%s, %s, %s, %s, %s, %s, %s);" 
+            query = "INSERT INTO editora.livros(nome_livro, id_autor_livro, id_editora_livro, data_de_lancamento_livro, id_genero_livro, id_status_livro, id_cliente_livro) VALUES (%s, %s, %s, %s, %s, %s, %s);" 
             cursor.execute(query, (nome, id_autor, id_editora, data, id_genero, status, id_cliente))
         
         conn.commit()
