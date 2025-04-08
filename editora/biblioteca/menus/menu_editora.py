@@ -49,6 +49,7 @@ def menu_editora(conn, id_cliente):
                     ano = nota = resenha = 'null'
 
                 inserir_livro(conn, nome, autor, editora, data, genero, status, ano, nota, resenha, id_cliente)
+                delay()
             
             case '2':
                 menu_visualizar_livros(conn, id_cliente)
